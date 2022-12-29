@@ -48,34 +48,3 @@ export const selectFlattenedTransactions = (state) =>
 
 export const { addTransaction, deleteTransaction } = transactionsSlice.actions;
 export default transactionsSlice.reducer;
-
-/* 
-export const addTransaction = (transaction) => {
-  return {
-    type: 'transactions/addTransaction',
-    payload: transaction
-  }
-}
-
-export const deleteTransaction = (transaction) => {
-  return {
-    type: 'transactions/deleteTransaction',
-    payload: transaction
-  }
-}
- */
-
-/* const transactionsReducer = (state = initialState, action) => {
-  let newTransactionsForCategory;
-  switch (action.type) {
-    case 'transactions/addTransaction':
-      newTransactionsForCategory = [...state[action.payload.category].slice(), action.payload]
-      return { ...state, [action.payload.category]: newTransactionsForCategory}
-    case 'transactions/deleteTransaction':
-      const deletedIndex = state[action.payload.category].findIndex(transaction => transaction.id === action.payload.id);
-      newTransactionsForCategory = state[action.payload.category].filter((item, index) => index !== deletedIndex)
-      return { ...state, [action.payload.category]: newTransactionsForCategory}
-    default:
-      return state;
-  }
-} */
